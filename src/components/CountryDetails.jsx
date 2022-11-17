@@ -7,13 +7,14 @@ import axios from 'axios';
 export default function CountryDetails() {
     
     const { code } = useParams();
-    const [countries, setCountries] = useState(null);
+    const [countries, setCountries] = useState([]);
 
     useEffect(() => {
         const apiData = async () => {
             try {
               const dataFromApi = await axios.get(`https://ih-countries-api.herokuapp.com/countries/${code}`);
               setCountries(dataFromApi.data)
+              console.log(countries)
             }
             catch (err) {
                 console.log(err)
@@ -24,7 +25,6 @@ export default function CountryDetails() {
 
     return (
         <div>
-            {/* {countries.name.common} */}
         </div>
     )
 }
