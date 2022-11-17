@@ -10,7 +10,7 @@ export default function CountriesList(props) {
                     return (
                         <ul key={country.alpha3Code}>
                             <li>
-                                <Link to={`${country.alpha3Code}`} >{country.name.common}</Link>
+                                <Link to={`/${country.alpha3Code}`} >{country.name.common}</Link>
                             </li>
                         </ul>
                     )
