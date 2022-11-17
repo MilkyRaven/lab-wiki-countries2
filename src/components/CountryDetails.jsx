@@ -13,6 +13,7 @@ export default function CountryDetails() {
         const apiData = async () => {
             try {
               const dataFromApi = await axios.get(`https://ih-countries-api.herokuapp.com/countries/${code}`);
+              setCountries(dataFromApi.data)
             }
             catch (err) {
                 console.log(err)
@@ -23,7 +24,7 @@ export default function CountryDetails() {
 
     return (
         <div>
-            
+            {/* {countries.name.common} */}
         </div>
     )
 }
