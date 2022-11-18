@@ -9,10 +9,12 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      <CountriesList countriesData={countriesJson} />
-      <Routes>
-       <Route path='/:code' element={<CountryDetails/>}/>
-      </Routes>
+      <div className="container">
+        <CountriesList countriesData={countriesJson} />
+        <Routes>
+          <Route path='/:code' element={<CountryDetails />} />
+        </Routes>
+      </div>
     </div>
   );
 }
