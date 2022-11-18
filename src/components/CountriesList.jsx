@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom'
 export default function CountriesList(props) {
     const { countriesData } = props
     return (
-        <div className="">
-            <div className="list-group">
+        <div className="countries-list">
+            <div>
                 {countriesData.map((country) => {
                     return (
                         <ul key={country.alpha3Code}>
-                            <li>
+                            <li className="list-group">
                                 <img alt='flag' src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} />
-                                <Link to={`${country.alpha3Code}`} >{country.name.common}</Link>
+                                <Link className='link' to={`${country.alpha3Code}`} >{country.name.common}</Link>
                             </li>
                         </ul>
                     )

@@ -1,8 +1,27 @@
 li {
   list-style: none;
 }
+.navbar {
+  text-align: center;
+}
 .container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+}
+.country-details {
+  position: sticky;
+  top:0;
+  margin: 10px;
+}
+.list-group {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.flag {
+  width: 250px;
+}
+.link {
+  text-decoration: none;
 }

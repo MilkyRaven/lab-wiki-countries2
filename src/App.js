@@ -8,12 +8,14 @@ import CountryDetails from './components/CountryDetails';
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <div className="container">
-        <CountriesList countriesData={countriesJson} />
-        <Routes>
-          <Route path='/:code' element={<CountryDetails />} />
-        </Routes>
+      <div>
+        <Navbar></Navbar>
+        <div className="container">
+          <CountriesList countriesData={countriesJson} />
+          <Routes>
+            <Route path='/:code' element={<CountryDetails />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );

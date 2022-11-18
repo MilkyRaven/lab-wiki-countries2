@@ -26,17 +26,17 @@ export default function CountryDetails() {
     return (
         <div>
             { country && (
-                <div>
-                <img alt='flag' src={`https://ih-countries-api.herokuapp.com/countries/${country.alpha3Code}`} />
+                <div className='country-details'>
+                <img className='flag' alt='flag' src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} />
                 <h1>{country.name.common}</h1>
                 <p>Capital {country.capital}</p>
                 <hr/>
                 <p>Area {country.area} km2</p>
                 <hr/>
-                <p>Borders {
+                <div>Borders {
                 country.borders.map((border)=>{
-                    return  <p>{border}</p>
-                })}</p>
+                    return  <p key={border}>{border}</p>
+                })}</div>
 
                 </div>
 
