@@ -11,7 +11,7 @@ function App() {
       <Navbar></Navbar>
       <CountriesList countriesData={countriesJson} />
       <Routes>
-       <Route path='/:code' element={<CountryDetails/>}/>
+       <Route path='/countries/:code' element={<CountryDetails/>}/>
       </Routes>
     </div>
   );
